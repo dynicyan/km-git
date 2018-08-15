@@ -8,8 +8,8 @@ export default {
         'user_info': {
           'id': 1,
           'username': 'admin',
-          'email': 'admin@yixia.comm',
-          'mobile': '13535353588'
+          'email': 'admin@qq.comm',
+          'mobile': '15555222222'
         },
         'menu_list': [{
           'id': 10,
