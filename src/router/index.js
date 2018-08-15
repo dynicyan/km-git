@@ -49,13 +49,11 @@ export const constantRouterMap = [
   {
     path: '/',
     component: Layout,
-    redirect: '/dashboard',
-    name: 'dashboard',
-    hidden: true,
-    meta: { title: '首页' },
+    name: 'home',
     children: [{
-      path: 'dashboard',
-      component: () => import('@/views/dashboard/index')
+      path: '/home',
+      component: () => import('@/views/dashboard/index'),
+      meta: { title: '首页' }
     }]
   }
   // { path: '*', redirect: '/404', hidden: true }
@@ -65,44 +63,34 @@ export const asyncRouterMap = [
   {
     path: '/tools',
     component: Layout,
-    redirect: '/tools/log',
-    alwaysShow: true,
-    meta: {
-      title: '工具箱',
-      icon: 'user',
-      roles: ['admin']
-    },
     children: [
       {
         path: 'log',
         component: () => import('@/views/tools/log'),
         name: 'log',
-        meta: {
-          title: '操作日志',
-          roles: ['admin']
-        }
+        meta: { title: '操作日志', roles: ['admin'] }
       }
     ]
   },
   {
+    path: '/icon',
+    component: Layout,
+    children: [{
+      path: 'index',
+      component: () => import('@/views/user/settings'),
+      name: 'icons',
+      meta: { title: 'icons', icon: 'icon' }
+    }]
+  },
+  {
     path: '/user',
     component: Layout,
-    redirect: '/user/settings',
-    alwaysShow: true,
-    meta: {
-      title: '账号',
-      icon: 'user',
-      roles: ['admin']
-    },
     children: [
       {
         path: 'settings',
         component: () => import('@/views/user/settings'),
         name: 'list',
-        meta: {
-          title: '账号设置',
-          roles: ['admin']
-        }
+        meta: { title: '账号设置', roles: ['admin'] }
       }
     ]
   },

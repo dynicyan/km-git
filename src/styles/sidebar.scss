@@ -5,17 +5,18 @@
     transition: margin-left .28s;
     position: relative;
     padding-top: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   // 侧边栏
   .sidebar-container {
     transition: width 0.28s;
     width: 100% !important;
-    position: fixed;
+    position: relative;
     font-size: 0px;
-    top: 0;
-    left: 0;
     z-index: 1001;
     overflow: hidden;
+    background-color: rgb(48, 65, 86);
     //reset element-ui css
     .horizontal-collapse-transition {
       transition: 0s width ease-in-out, 0s padding-left ease-in-out, 0s padding-right ease-in-out;
@@ -28,15 +29,17 @@
     }
     a {
       display: inline-block;
-      width: 100%;
+      float: left;
       overflow: hidden;
+      padding: 0 10px
     }
     .svg-icon {
       margin-right: 16px;
     }
     .el-menu {
       border: none;
-      width: 100% !important;
+      width: 1200px !important;
+      margin: 0 auto;
     }
   }
   // .hideSidebar {

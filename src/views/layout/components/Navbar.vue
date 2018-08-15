@@ -55,7 +55,7 @@ export default {
   border-radius: 0px !important;
   position: absolute;
   right: 10px;
-  top: 0px;
+  top: -56px;
   z-index: 99999;
   padding: 0 19px;
   background-color: rgba(0,0,0,0);

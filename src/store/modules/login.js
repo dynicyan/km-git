@@ -75,9 +75,9 @@ export default {
       })
     },
     // 登出
-    LogOut({ commit }) {
+    LogOut({ commit, state }) {
       return new Promise((resolve, reject) => {
-        login.logout().then(() => {
+        login.logout(state.token).then(() => {
           commit('SET_TOKEN', '')
           commit('SET_ROLES', [])
           removeToken()

@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { Message } from 'element-ui'
-import store from '../store'
-import { getToken } from '@/utils/auth'
+// import store from '../store'
+// import { getToken } from '@/utils/auth'
 import QS from 'qs'
 // 创建axios实例
 const service = axios.create({
@@ -12,10 +12,10 @@ service.options.emulateJSON = true
 // request拦截器
 service.interceptors.request.use((config) => {
   if (config.method === 'post') {
+    // if (store.getters.token) {
+    //   config.data._csrf = getToken()
+    // }
     config.data = QS.stringify(config.data)
-    if (store.getters.token) {
-      config.data._csrf = getToken()
-    }
     // config.data._csrf = getToken() // 让每个请求携带自定义token 请根据实际情况自行修改
   }
   config.headers['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8'

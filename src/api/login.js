@@ -23,8 +23,8 @@ export default {
   },
   logout(params) {
     return request({
-      url: '/site/logout',
-      method: 'get',
+      url: '/user/logout',
+      method: 'POST',
       data: params
     })
   }
