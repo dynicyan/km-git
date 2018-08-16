@@ -41,7 +41,7 @@ function deepCopy(source) {
 //   })
 //   return accessedRouters
 // }
-
+console.log(asyncRouterMap, constantRouterMap)
 const permission = {
   state: {
     routers: deepCopy(constantRouterMap),

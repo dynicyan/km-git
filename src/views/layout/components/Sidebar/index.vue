@@ -30,6 +30,8 @@ export default {
       // return !this.sidebar.opened
       return true
     }
+  },
+  created() {
   }
 }
 </script>
