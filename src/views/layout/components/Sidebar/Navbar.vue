@@ -1,5 +1,14 @@
 <template lang="pug">
   #topUserInfo
+    ul.sharePlatform
+      li
+        i.icon-twitter
+      li
+        i.icon-facebook
+      li
+        i.icon-weibo
+      li
+        i.icon-weixin
     ul.unloginArea(v-if='hasLogined')
       li(@click='registerUser') REGISTERED
       li /
@@ -20,7 +29,8 @@
           i.el-icon-arrow-down
         el-dropdown-menu.user-dropdown(slot="dropdown")
           router-link(class="inlineBlock" to="/")
-            el-dropdown-item 个人中心
+            el-dropdown-item
+              router-link(to='/home') 个人中心
           el-dropdown-item(divided)
             span(@click="logout" style="display:block;") 退出
     AppRegister
@@ -70,6 +80,32 @@ export default {
   position absolute
   top 0
   right 0
+  .sharePlatform
+    clear: both
+    position absolute
+    top 0
+    left -1035px
+    li
+      float left
+      line-height 52px
+      margin 0 12px
+      i
+        width 20px
+        height 20px
+        float left
+        margin-top 16px
+      .icon-twitter
+        background url('../../../../assets/twitter.svg') no-repeat left center
+        background-size contain
+      .icon-facebook
+        background url('../../../../assets/facebook.svg') no-repeat left center
+        background-size contain
+      .icon-weibo
+        background url('../../../../assets/weibo.svg') no-repeat left center
+        background-size contain
+      .icon-weixin
+        background url('../../../../assets/weixin.svg') no-repeat left center
+        background-size contain
   .unloginArea
     clear: both
     background url('../../../../assets/reGis.png') no-repeat left 9px
