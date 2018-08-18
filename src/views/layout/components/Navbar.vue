@@ -1,30 +1,36 @@
-<template>
-  <el-menu class="navbar" mode="horizontal">
-    <el-dropdown class="avatar-container" trigger="click">
-      <div class="avatar-wrapper">
-        <!--<img class="user-avatar" :src="avatar+'?imageView2/1/w/80/h/80'">-->
-        <span>admin</span>
-        <i class="el-icon-arrow-down"></i>
-      </div>
-      <el-dropdown-menu class="user-dropdown" slot="dropdown">
-        <router-link class="inlineBlock" to="/">
-          <el-dropdown-item>
-            账户设置
-          </el-dropdown-item>
-        </router-link>
-        <el-dropdown-item divided>
-          <span @click="logout" style="display:block;">退出</span>
-        </el-dropdown-item>
-      </el-dropdown-menu>
-    </el-dropdown>
-  </el-menu>
+<template lang="pug">
+  #topUserInfo
+    ul
+      li(@click='registerUser') SIGN IN
+      li(@click='loginUser') LOG IN
+    el-menu.navbar(mode="horizontal" v-if='hasLogined')
+      el-dropdown.avatar-container(trigger="click")
+        .avatar-wrapper
+          <!--<img class="user-avatar" :src="avatar+'?imageView2/1/w/80/h/80'">-->
+          span admin
+          i.el-icon-arrow-down
+        el-dropdown-menu.user-dropdown(slot="dropdown")
+          router-link(class="inlineBlock" to="/")
+            el-dropdown-item 个人中心
+          el-dropdown-item(divided)
+            span(@click="logout" style="display:block;") 退出
+    AppRegister
+    AppLogin
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-
+import AppRegister from './AppRegister'
+import AppLogin from './AppLogin'
 export default {
   components: {
+    AppRegister,
+    AppLogin
+  },
+  data() {
+    return {
+      hasLogined: false
+    }
   },
   computed: {
     ...mapGetters([
@@ -36,6 +42,8 @@ export default {
     ...mapActions({
       logOut: 'login/LogOut'
     }),
+    loginUser() {},
+    registerUser() {},
     toggleSideBar() {
       this.$store.dispatch('ToggleSideBar')
     },

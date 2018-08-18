@@ -2,9 +2,7 @@
   // 主体区域
   .main-container {
     min-height: 100%;
-    transition: margin-left .28s;
     position: relative;
-    padding-top: 80px;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -16,16 +14,14 @@
     font-size: 0px;
     z-index: 1001;
     overflow: hidden;
-    background-color: rgb(48, 65, 86);
+    background-color: #014266;
+    top: -5px;
     //reset element-ui css
     .horizontal-collapse-transition {
       transition: 0s width ease-in-out, 0s padding-left ease-in-out, 0s padding-right ease-in-out;
     }
-    .el-scrollbar__wrap{
-      height: auto
-    }
-    .is-horizontal {
-      display: block;
+    .el-scrollbar__bar.is-vertical{
+      display: none;
     }
     a {
       display: inline-block;
@@ -38,7 +34,7 @@
     }
     .el-menu {
       border: none;
-      width: 1200px !important;
+      width: 735px !important;
       margin: 0 auto;
     }
   }
@@ -82,10 +78,31 @@
   .sidebar-container .nest-menu .el-submenu>.el-submenu__title,
   .sidebar-container .el-submenu .el-menu-item {
     min-width: 240px !important;
-    background-color: $subMenuBg !important;
     &:hover {
       background-color: $menuHover !important;
     }
+  }
+  .el-menu-item{
+    font-weight: 500;
+    height: 52px;
+    line-height: 52px;
+    font-size: 16px;
+  }
+  .is-active{
+    position: relative;
+    color: #fff!important
+  }
+  .el-menu-item.is-active:before {
+      content: '';
+      float: left;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      background: #409EFF;
+      border-radius: 100%;
   }
   .el-menu--collapse.el-menu .el-submenu {
     max-width: 240px !important;

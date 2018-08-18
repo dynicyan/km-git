@@ -53,7 +53,7 @@ export const constantRouterMap = [
     children: [{
       path: '/home',
       component: () => import('@/views/dashboard/index'),
-      meta: { title: '首页' }
+      meta: { title: 'HOME' }
     }]
   }
   // { path: '*', redirect: '/404', hidden: true }
@@ -68,19 +68,21 @@ export const asyncRouterMap = [
         path: 'log',
         component: () => import('@/views/tools/log'),
         name: 'log',
-        meta: { title: '操作日志', roles: ['admin'] }
+        meta: { title: 'KMER RECOMMEND' }
       }
     ]
   },
   {
-    path: '/icon',
+    path: '/tool',
     component: Layout,
-    children: [{
-      path: 'index',
-      component: () => import('@/views/user/settings'),
-      name: 'icons',
-      meta: { title: 'icons', icon: 'icon' }
-    }]
+    children: [
+      {
+        path: 'log',
+        component: () => import('@/views/tools/log'),
+        name: 'log',
+        meta: { title: 'EVENTS' }
+      }
+    ]
   },
   {
     path: '/user',
@@ -90,7 +92,19 @@ export const asyncRouterMap = [
         path: 'settings',
         component: () => import('@/views/user/settings'),
         name: 'list',
-        meta: { title: '账号设置', roles: ['admin'] }
+        meta: { title: 'KMER SHOP', roles: ['admin'] }
+      }
+    ]
+  },
+  {
+    path: '/users',
+    component: Layout,
+    children: [
+      {
+        path: 'settings',
+        component: () => import('@/views/user/settings'),
+        name: 'list',
+        meta: { title: 'SAFARI', roles: ['admin'] }
       }
     ]
   },

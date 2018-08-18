@@ -4,7 +4,6 @@
     <AppHeader></AppHeader>
     <sidebar class="sidebar-container"></sidebar>
     <div class="main-container">
-      <navbar></navbar>
       <app-main></app-main>
     </div>
     <AppFooter></AppFooter>
@@ -12,13 +11,12 @@
 </template>
 
 <script>
-import { Navbar, Sidebar, AppMain, AppHeader, AppFooter } from './components'
+import { Sidebar, AppMain, AppHeader, AppFooter } from './components'
 import ResizeMixin from './mixin/ResizeHandler'
 
 export default {
   name: 'layout',
   components: {
-    Navbar,
     Sidebar,
     AppMain,
     AppHeader,
