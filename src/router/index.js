@@ -73,13 +73,13 @@ export const asyncRouterMap = [
     ]
   },
   {
-    path: '/tool',
+    path: '/events',
     component: Layout,
     children: [
       {
-        path: 'log',
-        component: () => import('@/views/tools/log'),
-        name: 'log',
+        path: 'list',
+        component: () => import('@/views/events/list'),
+        name: 'list',
         meta: { title: 'EVENTS' }
       }
     ]
