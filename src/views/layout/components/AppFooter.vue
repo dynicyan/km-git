@@ -33,7 +33,7 @@ export default {
 <style lang="stylus" scoped>
 #km-footer
   min-height 200px
-  background-image linear-gradient(to right, rgba(9, 9, 9, 1), rgba(10, 10, 10, 0.95) 53%, rgba(15, 15, 15, 0.9))
+  background-image linear-gradient(to right, #262626, #333 53%, rgba(15, 15, 15, 0.9))
   .copyright
     padding-left 80px
     text-align left
