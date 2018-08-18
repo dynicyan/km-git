@@ -12,18 +12,6 @@ import App from './App'
 import router from './router'
 import store from './store'
 sync(store, router)
-router.beforeEach((to, from, next) => {
-  next()
-  if (!to.matched.some(record => record.meta.requireAuth === false)) {
-    // if (!store.getters['login/isLogin']) {
-    // store.dispatch('login/fetch').then(() => checkAuth(from, to, next))
-    // } else {
-    // checkAuth(from, to, next)
-    // }
-  } else {
-    next()
-  }
-})
 import '@/permission' // permission control
 if (process.env.NODE_ENV === 'development') {
   require('./mock') // simulation data
