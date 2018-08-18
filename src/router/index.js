@@ -52,7 +52,7 @@ export const constantRouterMap = [
     name: 'home',
     children: [{
       path: '/home',
-      component: () => import('@/views/dashboard/index'),
+      component: () => import('@/views/home/index'),
       meta: { title: 'HOME' }
     }]
   }
