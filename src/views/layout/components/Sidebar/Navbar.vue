@@ -9,11 +9,11 @@
         i.icon-weibo
       li
         i.icon-weixin
-    ul.unloginArea(v-if='hasLogined')
+    ul.unloginArea(v-if='!hasLogined')
       li(@click='registerUser') REGISTERED
       li /
       li(@click='loginUser') LOG IN
-    .loginbar(v-if='!hasLogined')
+    .loginbar(v-if='hasLogined')
       .userInfos
         i.icon-bugCar
           b.carNums 
@@ -28,13 +28,12 @@
           //- span admin
           i.el-icon-arrow-down
         el-dropdown-menu.user-dropdown(slot="dropdown")
-          router-link(class="inlineBlock" to="/")
-            el-dropdown-item
-              router-link(to='/home') 个人中心
+          router-link(class="inlineBlock" to="/user")
+            el-dropdown-item 个人中心
           el-dropdown-item(divided)
             span(@click="logout" style="display:block;") 退出
     AppRegister
-    AppLogin
+    AppLogin(:showDialogLg='showLgDialog' @closeLg='closeLgDialog')
 </template>
 
 <script>
@@ -48,7 +47,8 @@ export default {
   },
   data() {
     return {
-      hasLogined: false
+      hasLogined: false,
+      showLgDialog: false
     }
   },
   computed: {
@@ -61,14 +61,22 @@ export default {
     ...mapActions({
       logOut: 'login/LogOut'
     }),
-    loginUser() {},
+    loginUser() {
+      this.showLgDialog = true
+    },
+    closeLgDialog(val) {
+      console.log(val)
+      this.showLgDialog = false
+    },
     registerUser() {},
     toggleSideBar() {
       this.$store.dispatch('ToggleSideBar')
     },
     logout() {
       this.logOut().then((res) => {
-        location.reload() // 为了重新实例化vue-router对象 避免bug
+        this.hasLogined = false
+        this.$router.push('/home')
+        // location.reload() // 为了重新实例化vue-router对象 避免bug
       })
     }
   }

@@ -7,6 +7,9 @@ import 'element-ui/lib/theme-chalk/index.css'
 import locale from 'element-ui/lib/locale/lang/zh-CN' // lang i18n
 import { sync } from 'vuex-router-sync'
 import '@/styles/index.scss' // global css
+import 'swiper/dist/css/swiper.css'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import Helpers from './helpers'
 
 import App from './App'
 import router from './router'
@@ -17,7 +20,7 @@ if (process.env.NODE_ENV === 'development') {
   require('./mock') // simulation data
 }
 
-Vue.use(ElementUI, { locale })
+Vue.use(ElementUI, { locale }, VueAwesomeSwiper, Helpers)
 
 Vue.config.productionTip = false
 

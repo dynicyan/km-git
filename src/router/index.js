@@ -85,11 +85,11 @@ export const asyncRouterMap = [
     ]
   },
   {
-    path: '/user',
+    path: '/setting',
     component: Layout,
     children: [
       {
-        path: 'settings',
+        path: '',
         component: () => import('@/views/user/settings'),
         name: 'list',
         meta: { title: 'KMER SHOP', roles: ['admin'] }
@@ -97,14 +97,31 @@ export const asyncRouterMap = [
     ]
   },
   {
-    path: '/users',
+    path: '/safari',
     component: Layout,
     children: [
       {
-        path: 'settings',
-        component: () => import('@/views/user/settings'),
+        path: '',
+        component: () => import('@/views/safari/index'),
         name: 'list',
-        meta: { title: 'SAFARI', roles: ['admin'] }
+        meta: { title: 'SAFARI' }
+      }
+    ]
+  },
+  {
+    path: '/user',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/user/index'),
+        name: 'list'
+      },
+      {
+        path: 'log',
+        component: () => import('@/views/tools/log'),
+        name: 'log'
       }
     ]
   },

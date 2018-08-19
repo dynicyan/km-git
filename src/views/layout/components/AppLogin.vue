@@ -1,6 +1,6 @@
 <template lang="pug">
-  #km-login
-    el-dialog(:visible.sync="dialogLoginVisible" :close-on-click-modal='false')
+  #km-login(v-if='showDialogLg')
+    el-dialog(:visible="true" :close-on-click-modal='false' @close='closeLg')
       .loginHeader
         i.loginIcon
         h2 LOGIN
@@ -24,9 +24,15 @@
 <script>
 export default {
   name: 'AppLogin',
+  props: {
+    showDialogLg: {
+      type: Boolean,
+      default: false
+    }
+  },
   data() {
     return {
-      dialogLoginVisible: false,
+      dialogLoginVisible: true,
       loginForm: {
         loginName: '',
         passWord: ''
@@ -41,6 +47,10 @@ export default {
   methods: {
     submitForm() {
       console.log(111)
+    },
+    closeLg() {
+      // this.dialogLoginVisible = false
+      this.$emit('closeLg', this.dialogLoginVisible)
     }
   }
 }
