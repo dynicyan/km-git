@@ -33,7 +33,7 @@
           el-dropdown-item(divided)
             span(@click="logout" style="display:block;") 退出
     AppRegister
-    AppLogin(:showDialogLg='showLgDialog' @closeLg='closeLgDialog')
+    AppLogin(:showDialogLg='showLgDialog' @closeLg='closeLgDialog' @submitFormsss='hasUserLogined')
 </template>
 
 <script>
@@ -47,15 +47,21 @@ export default {
   },
   data() {
     return {
-      hasLogined: false,
       showLgDialog: false
     }
   },
   computed: {
+    hasLogined() {
+      return this.token
+    },
     ...mapGetters([
       'sidebar',
-      'avatar'
+      'avatar',
+      'token'
     ])
+  },
+  created() {
+    console.log(this.token)
   },
   methods: {
     ...mapActions({
@@ -68,13 +74,16 @@ export default {
       console.log(val)
       this.showLgDialog = false
     },
+    hasUserLogined(val) {
+      console.log(val)
+      this.showLgDialog = false
+    },
     registerUser() {},
     toggleSideBar() {
       this.$store.dispatch('ToggleSideBar')
     },
     logout() {
       this.logOut().then((res) => {
-        this.hasLogined = false
         this.$router.push('/home')
         // location.reload() // 为了重新实例化vue-router对象 避免bug
       })

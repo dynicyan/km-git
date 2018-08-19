@@ -1,5 +1,5 @@
 import login from '@/api/login'
-import { getToken, removeToken, setToken } from '@/utils/auth'
+import { getToken, removeToken } from '@/utils/auth'
 // import md5 from 'blueimp-md5'
 
 export default {
@@ -30,17 +30,18 @@ export default {
     // 登录
     LoginByUsername({ commit }, userInfo) {
       // const username = userInfo.username.trim()
-      return new Promise((resolve, reject) => {
-        login.login(userInfo).then(response => {
-          console.log(response)
-          const data = response.data
-          commit('SET_TOKEN', data.token)
-          setToken(response.data.token)
-          resolve()
-        }).catch(error => {
-          reject(error)
-        })
-      })
+      return login.login(userInfo)
+      // return new Promise((resolve, reject) => {
+      //   login.login(userInfo).then(response => {
+      //     console.log(response)
+      //     const data = response.data
+      //     commit('SET_TOKEN', data.token)
+      //     setToken(response.data.token)
+      //     resolve()
+      //   }).catch(error => {
+      //     reject(error)
+      //   })
+      // })
     },
     // 检查是否登录
     checkLogin({ commit }) {

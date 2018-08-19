@@ -88,6 +88,8 @@
 					line-height 22px
 					font-size 16px
 					color #000
+					span
+						margin-right 20px
 			.km-signature
 				max-width 700px
 				margin-top 45px

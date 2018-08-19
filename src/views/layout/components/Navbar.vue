@@ -32,10 +32,14 @@ export default {
       hasLogined: false
     }
   },
+  created() {
+    console.log(this)
+  },
   computed: {
     ...mapGetters([
       'sidebar',
-      'avatar'
+      'avatar',
+      'hasLogined'
     ])
   },
   methods: {
