@@ -2,7 +2,7 @@
   #km-footer
     .footerAd
       img(src='../../../assets/footerPic.png' v-if="$route.path === '/home'")
-      .adWrapper(v-if="$route.path === '/user' || $route.path === '/home'")
+      .adWrapper(v-if="$route.path.indexOf('/user') > -1 || $route.path === '/home'")
         img(src='../../../assets/footerAd.jpg')
         i.adIcon Ad
     .footer-copyright

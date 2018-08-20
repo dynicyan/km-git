@@ -114,13 +114,18 @@ export const asyncRouterMap = [
     hidden: true,
     children: [
       {
-        path: '',
+        path: 'personal',
         component: () => import('@/views/user/index'),
         name: 'list'
       },
       {
-        path: 'log',
-        component: () => import('@/views/tools/log'),
+        path: '',
+        component: () => import('@/views/user/personal'),
+        name: 'log'
+      },
+      {
+        path: 'notices',
+        component: () => import('@/views/user/notices'),
         name: 'log'
       }
     ]
