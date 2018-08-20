@@ -77,9 +77,16 @@ export const asyncRouterMap = [
     component: Layout,
     children: [
       {
-        path: 'list',
+        path: '',
         component: () => import('@/views/events/list'),
         name: 'list',
+        meta: { title: 'EVENTS' }
+      },
+      {
+        path: 'detail',
+        component: () => import('@/views/events/detail'),
+        name: 'detail',
+        hidden: true,
         meta: { title: 'EVENTS' }
       }
     ]

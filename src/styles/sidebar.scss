@@ -2,7 +2,7 @@
   // 主体区域
   .main-container {
     position: relative;
-    max-width: 1235px;
+    width: 1235px;
     margin: 0 auto;
   }
   // 侧边栏
@@ -111,6 +111,7 @@
     color: #fff!important
   }
   .el-menu-item.is-active:before {
+      display: none;
       content: '';
       float: left;
       position: absolute;

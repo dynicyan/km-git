@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="17px" viewBox="0 0 14 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>system-map2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="299" height="896"></rect>
+        <filter x="-4.8%" y="-1.4%" width="109.7%" height="103.2%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.141077899 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="c-EVEND-进行中详情" transform="translate(-1295.000000, -705.000000)">
+            <g id="Group-3" transform="translate(1278.000000, 334.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+            </g>
+            <g id="system-map2" transform="translate(1295.000000, 705.000000)" fill="#014266" fill-rule="nonzero">
+                <path d="M6.9995942,0 C3.13362351,0 0,2.96207631 0,6.61492689 C0,10.2686076 6.9995942,17 6.9995942,17 C6.9995942,17 14,10.268591 14,6.61492689 C14,2.96207631 10.865548,0 6.9995942,0 Z M6.97981155,8.55702079 C5.54810519,8.55702079 4.38740432,7.45938917 4.38740432,6.10614766 C4.38740432,4.75371966 5.54810519,3.65608804 6.97982845,3.65608804 C8.41153481,3.65608804 9.57223568,4.75371966 9.57223568,6.10614766 C9.57223568,7.45940577 8.41153481,8.55702079 6.97982845,8.55702079 L6.97981155,8.55702079 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

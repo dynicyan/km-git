@@ -1,8 +1,8 @@
 <template lang="pug">
   #km-footer
     .footerAd
-      img(src='../../../assets/footerPic.png' v-if="$route.path === '/home'")
-      .adWrapper(v-if="$route.path === '/user' || $route.path === '/home'")
+      img(src='../../../assets/footerPic.png' v-if="$route.path === '/home' || $route.path === '/events/list'")
+      .adWrapper(v-if="$route.path === '/user' || $route.path === '/home' || $route.path === '/events/list'")
         img(src='../../../assets/footerAd.jpg')
         i.adIcon Ad
     .footer-copyright

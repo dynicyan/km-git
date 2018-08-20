@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="343" y="334" width="915" height="1251"></rect>
+        <filter x="-1.6%" y="-1.0%" width="103.2%" height="102.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.141077899 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="c-EVEND-进行中详情" transform="translate(-1099.000000, -447.000000)">
+            <g id="Mask">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <g id="Group-12" transform="translate(1006.000000, 447.000000)">
+                <g id="Group-10-Copy" transform="translate(93.000000, 0.000000)" fill="#8C8C8C">
+                    <circle id="Oval-4" cx="12.5" cy="12.5" r="12.5"></circle>
+                </g>
+                <g id="web-Facebook" transform="translate(102.000000, 6.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <path d="M3.99063482,0 C3.57541622,0 3.18327636,0.0459592652 2.72191556,0.229704956 C1.77614579,0.620145513 1.31481558,1.49297561 1.31481558,2.89401747 L1.31481558,4.24914575 L0,4.24914575 L0,6.50002284 L1.31481558,6.50002284 L1.31481558,13 L3.99061953,13 L3.99061953,6.50002284 L5.81293811,6.50002284 L6.06666667,4.24914575 L3.99058894,4.24914575 L3.99058894,3.23854445 C3.99058894,2.9169971 4.01365239,2.6873226 4.1059062,2.57243967 C4.22122346,2.3657448 4.45191915,2.27385673 4.82098027,2.27385673 L6.04354204,2.27385673 L6.04354204,0.0229796326 L3.99054306,0.0229796326 L3.99063482,0 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>标签</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="299" height="896"></rect>
+        <filter x="-4.8%" y="-1.4%" width="109.7%" height="103.2%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.141077899 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="c-EVEND-进行中详情" transform="translate(-1295.000000, -380.000000)">
+            <g id="Group-3" transform="translate(1278.000000, 334.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+            </g>
+            <g id="标签" transform="translate(1295.000000, 380.000000)" fill="#014266" fill-rule="nonzero">
+                <path d="M13.6,6.7 L7.3,0.4 C7,0.2 6.7,0 6.3,0 L1.4,0 C0.6,1.11022302e-16 0,0.6 0,1.4 L0,6.3 C0,6.7 0.2,7 0.4,7.3 L6.7,13.6 C7,13.8 7.3,14 7.7,14 C8.1,14 8.4,13.8 8.7,13.6 L13.6,8.7 C13.9,8.4 14,8.1 14,7.7 C14,7.3 13.8,7 13.6,6.7 Z M2.7,3.8 C2.1,3.8 1.6,3.3 1.6,2.7 C1.6,2.1 2.1,1.6 2.7,1.6 C3.3,1.6 3.8,2.1 3.8,2.7 C3.8,3.3 3.3,3.8 2.7,3.8 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

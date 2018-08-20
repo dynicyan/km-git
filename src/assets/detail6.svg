@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>日期</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="299" height="896"></rect>
+        <filter x="-4.8%" y="-1.4%" width="109.7%" height="103.2%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.141077899 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="c-EVEND-进行中详情" transform="translate(-1295.000000, -525.000000)">
+            <g id="Group-3" transform="translate(1278.000000, 334.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+            </g>
+            <g id="eventlist2-copy-2" transform="translate(1295.000000, 525.000000)" fill="#014266">
+                <g id="eventlist">
+                    <g id="Group-22">
+                        <g id="日期">
+                            <g transform="translate(7.000000, 7.000000) scale(-1, 1) translate(-7.000000, -7.000000) " id="Shape">
+                                <path d="M2.47058824,0 L4.2,0 L4.2,2.47058824 L2.47058824,2.47058824 L2.47058824,0 Z M9.38823529,0 L11.1176471,0 L11.1176471,2.47058824 L9.38823529,2.47058824 L9.38823529,0 Z" fill-rule="nonzero"></path>
+                                <path d="M13.125,1.23529412 L12.25,1.23529412 L12.25,2.9719888 L8.75,2.9719888 L8.75,1.23529412 L5.25,1.23529412 L5.25,2.9719888 L1.75,2.9719888 L1.75,1.23529412 L0.875,1.23529412 C0.35,1.23529412 0,1.58263305 0,2.10364146 L0,13.1316527 C0,13.5658263 0.35,14 0.875,14 L13.125,14 C13.65,14 14,13.6526611 14,13.1316527 L14,2.10364146 C14,1.58263305 13.65,1.23529412 13.125,1.23529412 Z M4.375,11.394958 L2.625,11.394958 L2.625,9.65826331 L4.375,9.65826331 L4.375,11.394958 Z M4.375,7.92156863 L2.625,7.92156863 L2.625,6.18487395 L4.375,6.18487395 L4.375,7.92156863 Z M7.875,11.394958 L6.125,11.394958 L6.125,9.65826331 L7.875,9.65826331 L7.875,11.394958 Z M7.875,7.92156863 L6.125,7.92156863 L6.125,6.18487395 L7.875,6.18487395 L7.875,7.92156863 Z M11.375,11.394958 L9.625,11.394958 L9.625,9.65826331 L11.375,9.65826331 L11.375,11.394958 Z M11.375,7.92156863 L9.625,7.92156863 L9.625,6.18487395 L11.375,6.18487395 L11.375,7.92156863 Z" fill-rule="nonzero"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
