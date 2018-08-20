@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="414px" height="53px" viewBox="0 0 414 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>1ab7ab4df21f3ce776c12b3bdf09efb4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="23.2317385%" y1="50%" x2="77.2561333%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#29ABE2" offset="0%"></stop>
+            <stop stop-color="#048BD3" offset="100%"></stop>
+        </linearGradient>
+        <path d="M15,0 L414,0 L414,0 C414,29.2710917 390.271092,53 361,53 L0,53 L0,15 C-1.01453063e-15,6.71572875 6.71572875,1.52179594e-15 15,0 Z" id="path-2"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="a-home" transform="translate(-675.000000, -814.000000)">
+            <g id="1ab7ab4df21f3ce776c12b3bdf09efb4" transform="translate(675.000000, 814.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>

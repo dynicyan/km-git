@@ -1,11 +1,11 @@
 <template lang="pug">
-  #km-login
-    el-dialog(:visible.sync="dialogLoginVisible" :close-on-click-modal='false')
+  #km-login(v-if='showDialogLg')
+    el-dialog(:visible="true" :close-on-click-modal='false' @close='closeLg')
       .loginHeader
         i.loginIcon
         h2 LOGIN
         p Starting a new life here！
-      el-form.loginForm(:model="loginForm" status-icon ref="loginForm" label-position='left')
+      el-form.loginForm(:model="loginForm" :rules='loginRules' status-icon ref="loginForm" label-position='left')
         el-form-item(prop="loginName")
             el-input(type='text' v-model="loginForm.loginName" placeholder="userName/e-mail")
         el-form-item(prop="passWord")
@@ -22,14 +22,26 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+import { setToken } from '@/utils/auth'
 export default {
   name: 'AppLogin',
+  props: {
+    showDialogLg: {
+      type: Boolean,
+      default: false
+    }
+  },
   data() {
     return {
-      dialogLoginVisible: false,
+      dialogLoginVisible: true,
       loginForm: {
         loginName: '',
         passWord: ''
+      },
+      loginRules: {
+        username: [{ required: true }],
+        password: [{ required: true }]
       }
     }
   },
@@ -39,8 +51,36 @@ export default {
     }
   },
   methods: {
+    ...mapActions({
+      login: 'login/LoginByUsername'
+    }),
     submitForm() {
-      console.log(111)
+      let self = this
+      this.$refs.loginForm.validate(valid => {
+        if (valid) {
+          this.login(this.loginForm).then((res) => {
+            self.loading = false
+            if (+res.code === 0) {
+              setToken(res.data.token)
+              self.$store.commit('login/SET_TOKEN', res.data.token)
+              self.$emit('submitFormsss', '111')
+            } else {
+              self.$message({
+                message: res.message,
+                type: 'warning'
+              })
+            }
+          }).catch(() => {
+          })
+        } else {
+          console.log('error submit!!')
+          return false
+        }
+      })
+    },
+    closeLg() {
+      // this.dialogLoginVisible = false
+      this.$emit('closeLg', this.dialogLoginVisible)
     }
   }
 }

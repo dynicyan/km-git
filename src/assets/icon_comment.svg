@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="22px" viewBox="0 0 23 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>评论-2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-4.0%" y="-2.4%" width="108.1%" height="106.7%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-2.4%" y="-1.7%" width="104.8%" height="104.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.122990263 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="safats" transform="translate(-81.000000, -261.000000)" fill="#8E8E93" fill-rule="nonzero">
+            <g id="Group-3" filter="url(#filter-1)">
+                <g id="Group-9-Copy" filter="url(#filter-2)">
+                    <g id="Group-6">
+                        <g id="赞" transform="translate(10.000000, 262.000000)">
+                            <g id="Group">
+                                <g id="评论-2" transform="translate(77.000000, 2.000000)">
+                                    <path d="M10.5693763,1.0156685e-16 L1.17502793,1.0156685e-16 C0.52288743,1.0156685e-16 0,0.515233866 0,1.15342127 L0,11.5576324 L2.35005587,9.24493493 L10.5693763,9.24493493 C11.2215168,9.24493493 11.7444042,8.72970107 11.7444042,8.09151367 L11.7444042,1.15342127 C11.7385291,0.515233866 11.2215168,0 10.5693763,1.0156685e-16 Z M4.11259777,5.1991781 L2.93756983,5.1991781 L2.93756983,4.04575683 L4.11259777,4.04575683 L4.11259777,5.1991781 Z M6.45677849,5.1991781 L5.28175056,5.1991781 L5.28175056,4.04575683 L6.45677849,4.04575683 L6.45677849,5.1991781 Z M8.80683436,5.1991781 L7.63180643,5.1991781 L7.63180643,4.04575683 L8.80683436,4.04575683 L8.80683436,5.1991781 Z" id="Shape"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
