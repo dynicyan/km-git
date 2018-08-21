@@ -7,7 +7,8 @@
           .share-date
             .date-info
               span.date 2018/04/29
-              span.text(:class="{'end': type === '2'}") 进行中
+              span.text(v-if="type === '1'") 进行中
+              span.end(v-if="type === '2'") 已结束
             .share
               span 分享到
               img.icon-twitter(src="../../assets/detail1.svg")
@@ -162,6 +163,7 @@
             color #29abe2
           .end
             color #8c8c8c
+            margin-left 13px
           .date-info
             text-align center
           .share

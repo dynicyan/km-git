@@ -61,13 +61,13 @@ export const constantRouterMap = [
 
 export const asyncRouterMap = [
   {
-    path: '/tools',
+    path: '/recommend',
     component: Layout,
     children: [
       {
-        path: 'log',
-        component: () => import('@/views/tools/log'),
-        name: 'log',
+        path: '',
+        component: () => import('@/views/recommend/list'),
+        name: 'list',
         meta: { title: 'KMER RECOMMEND' }
       }
     ]
