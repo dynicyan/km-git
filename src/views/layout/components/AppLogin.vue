@@ -80,7 +80,7 @@ export default {
     },
     closeLg() {
       // this.dialogLoginVisible = false
-      this.$emit('closeLg', this.dialogLoginVisible)
+      this.$emit('closeLg')
     }
   }
 }

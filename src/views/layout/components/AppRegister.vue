@@ -1,6 +1,6 @@
 <template lang="pug">
-  #km-register
-    el-dialog(:visible.sync="dialogTableVisible" :close-on-click-modal='false')
+  #km-register(v-if='dialogRegisterVisible')
+    el-dialog(:visible="true" :close-on-click-modal='false' @close='closeRgDialog')
       .registerHeader
         i.registerIcon
         h2 REGISTER
@@ -36,9 +36,14 @@
 <script>
 export default {
   name: 'AppRegister',
+  props: {
+    dialogRegisterVisible: {
+      type: Boolean,
+      default: false
+    }
+  },
   data() {
     return {
-      dialogTableVisible: false,
       registerForm: {
         beforeName: '',
         afterName: '',
@@ -57,6 +62,9 @@ export default {
   methods: {
     submitForm() {
       console.log(111)
+    },
+    closeRgDialog() {
+      this.$emit('closeRglog')
     }
   }
 }
@@ -148,6 +156,7 @@ export default {
         font-size 12px
         text-align center
         a
+          float: initial
           color #29ABE2
       .rgsdBtn
         width 210px
