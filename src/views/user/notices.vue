@@ -3,7 +3,7 @@
   h2 我的消息
   .notice-wrap
     .menuBar
-      span.menuItem(v-for='menu, index in mentList' @click='changeNoticeTab(index)' :class="activeIndex === index ? 'menu_active' : ''") {{menu}}
+      span.menuItem(v-for='menu, index in mentList' @click='changeNoticeTab(index)' v-bind:class="activeIndex === index ? 'menu_active' : ''") {{menu}}
     .notice-list(v-if='data')
       p 暂无数据
     ul.notice-list(v-if='activeIndex === 0')

@@ -42,7 +42,7 @@
 						i.icon.icon-info
 						span 我的消息
 			li
-				router-link(to='/user/notices')
+				router-link(to='/user/wish')
 					.list-wrapper
 						i.icon.icon-activity
 						span 我的活动
@@ -52,12 +52,12 @@
 						i.icon.icon-order
 						span 我的订单
 			li
-				router-link(to='/user/notices')
+				router-link(to='/user/collect')
 					.list-wrapper
 						i.icon.icon-collect
 						span 我的收藏
 			li
-				router-link(to='/user/notices')
+				router-link(to='/user/address')
 					.list-wrapper
 						i.icon.icon-address
 						span 我的地址管理

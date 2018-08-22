@@ -123,17 +123,47 @@ export const asyncRouterMap = [
       {
         path: 'personal',
         component: () => import('@/views/user/index'),
-        name: 'list'
+        name: 'personal'
       },
       {
         path: '',
         component: () => import('@/views/user/personal'),
-        name: 'log'
+        name: ''
       },
       {
         path: 'notices',
         component: () => import('@/views/user/notices'),
         name: 'log'
+      },
+      {
+        path: 'collect',
+        component: () => import('@/views/user/collect'),
+        name: 'collect'
+      },
+      {
+        path: 'address',
+        component: () => import('@/views/user/address'),
+        name: 'address'
+      },
+      {
+        path: 'edit',
+        component: () => import('@/views/user/editAddress'),
+        name: 'edit'
+      },
+      {
+        path: 'add',
+        component: () => import('@/views/user/adAddress'),
+        name: 'add'
+      },
+      {
+        path: 'wish',
+        component: () => import('@/views/user/wish'),
+        name: 'wish'
+      },
+      {
+        path: 'wishlist',
+        component: () => import('@/views/user/wishlist'),
+        name: 'wishlist'
       }
     ]
   },

@@ -32,7 +32,7 @@
             el-dropdown-item 个人中心
           el-dropdown-item(divided)
             span(@click="logout" style="display:block;") 退出
-    AppRegister
+    AppRegister(:dialogRegisterVisible='showRgDialog'  @closeRglog='closeRgModal')
     AppLogin(:showDialogLg='showLgDialog' @closeLg='closeLgDialog' @submitFormsss='hasUserLogined')
 </template>
 
@@ -47,7 +47,8 @@ export default {
   },
   data() {
     return {
-      showLgDialog: false
+      showLgDialog: false,
+      showRgDialog: false
     }
   },
   computed: {
@@ -71,14 +72,17 @@ export default {
       this.showLgDialog = true
     },
     closeLgDialog(val) {
-      console.log(val)
       this.showLgDialog = false
     },
     hasUserLogined(val) {
-      console.log(val)
       this.showLgDialog = false
     },
-    registerUser() {},
+    registerUser() {
+      this.showRgDialog = true
+    },
+    closeRgModal() {
+      this.showRgDialog = false
+    },
     toggleSideBar() {
       this.$store.dispatch('ToggleSideBar')
     },
