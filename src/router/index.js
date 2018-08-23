@@ -126,6 +126,12 @@ export const asyncRouterMap = [
         component: () => import('@/views/safari/index'),
         name: 'list',
         meta: { title: 'SAFARI' }
+      },
+      {
+        path: 'public',
+        component: () => import('@/views/safari/pubSafari'),
+        hidden: true,
+        name: 'public'
       }
     ]
   },

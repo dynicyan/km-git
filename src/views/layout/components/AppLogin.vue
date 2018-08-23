@@ -1,6 +1,6 @@
 <template lang="pug">
   #km-login(v-if='showDialogLg')
-    el-dialog(:visible="true" :close-on-click-modal='false' @close='closeLg')
+    el-dialog(visible.sync='true' :close-on-click-modal='false' @close='closeLg')
       .loginHeader
         i.loginIcon
         h2 LOGIN
@@ -11,7 +11,7 @@
         el-form-item(prop="passWord")
             el-input(type='password' v-model="loginForm.passWord" placeholder="passWord")
         el-button.loginBtn(v-on:click="submitForm('loginForm')") LOGIN
-        a.forgetPwd 忘记密码
+        a.forgetPwd(@click='forgetPwdFun') 忘记密码
       .dialog-footer(slot="footer")
         i.loginIcon
         .loginFooter
@@ -19,6 +19,11 @@
           a 立即注册
           p.white 增加KM值可以抵换商品哦
         i.el-icon-arrow-right
+    el-dialog(:visible.sync="forgetFlag" :close-on-click-modal='false' @close='closeFg')
+      el-form.loginForm(:model="forgetForm" :rules='forgetRules' status-icon ref="forgetForm" label-position='left')
+        el-form-item(prop="email")
+            el-input(type='text' v-model="forgetForm.email" placeholder="email")
+        el-button.loginBtn(v-on:click="sendValidate('forgetForm')") 发送验证码
 </template>
 
 <script>
@@ -35,9 +40,16 @@ export default {
   data() {
     return {
       dialogLoginVisible: true,
+      forgetFlag: false,
       loginForm: {
         loginName: '',
         passWord: ''
+      },
+      forgetForm: {
+        email: ''
+      },
+      forgetRules: {
+        email: [{ required: true }]
       },
       loginRules: {
         username: [{ required: true }],
@@ -54,6 +66,18 @@ export default {
     ...mapActions({
       login: 'login/LoginByUsername'
     }),
+    forgetPwdFun() {
+      this.forgetFlag = true
+      this.dialogLoginVisible = false
+    },
+    sendValidate() {
+      let self = this
+      this.$refs.forgetForm.validate(valid => {
+        if (valid) {
+          self.$emit('submitFormsss')
+        }
+      })
+    },
     submitForm() {
       let self = this
       this.$refs.loginForm.validate(valid => {
@@ -63,7 +87,7 @@ export default {
             if (+res.code === 0) {
               setToken(res.data.token)
               self.$store.commit('login/SET_TOKEN', res.data.token)
-              self.$emit('submitFormsss', '111')
+              self.$emit('submitFormsss')
             } else {
               self.$message({
                 message: res.message,
@@ -80,7 +104,10 @@ export default {
     },
     closeLg() {
       // this.dialogLoginVisible = false
-      this.$emit('closeLg')
+      !this.forgetFlag && this.$emit('closeLg')
+    },
+    closeFg() {
+      this.forgetFlag = false
     }
   }
 }
@@ -183,9 +210,12 @@ export default {
           line-height 25px
           font-size 18px
           color #fff
+          padding 0
           &:hover
             color #29ABE2
         .white
+          float left
+          width 100%
           color #fff
       .loginIcon
         left 30px
