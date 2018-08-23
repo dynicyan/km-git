@@ -69,6 +69,20 @@ export const asyncRouterMap = [
         component: () => import('@/views/recommend/list'),
         name: 'list',
         meta: { title: 'KMER RECOMMEND' }
+      },
+      {
+        path: 'detail',
+        component: () => import('@/views/recommend/detail'),
+        name: 'detail',
+        hidden: true,
+        meta: { title: 'KMER RECOMMEND' }
+      },
+      {
+        path: 'shopdetail',
+        component: () => import('@/views/recommend/shopdetail'),
+        name: 'detail',
+        hidden: true,
+        meta: { title: 'KMER RECOMMEND' }
       }
     ]
   },
